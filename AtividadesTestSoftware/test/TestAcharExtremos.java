@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import br.edu.utfpr.magneira.Extremos;
 import br.edu.utfpr.magneira.Utilitario;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,7 +19,7 @@ import static org.junit.Assert.*;
  */
 public class TestAcharExtremos {
     
-    Utilitario a;
+  
     
     public TestAcharExtremos() {
     }
@@ -40,8 +41,40 @@ public class TestAcharExtremos {
     }
 
     @Test
-    public void casoTestQuestao1()
+    public void casoTestQuestao1() throws Exception
     {
+        int v[] = {1,2,3,4,5,6};
+        Utilitario a = new Utilitario();
+        Extremos res;
+       
+        res = a.acharExtremos(v);
+        assertEquals(1,res.getMenor());
+        assertEquals(0,res.getIndiceMenor());
+        assertEquals(6,res.getMaior());
+        assertEquals(5,res.getIndiceMaior());
         
     }
+    @Test 
+    public void casoDeTest02() throws Exception
+    {
+        int v[] = {1, 99, 3, -5, 8};
+        Utilitario a = new Utilitario();
+        Extremos res;
+       
+        res = a.acharExtremos(v);
+        assertEquals(-5, res.getMenor());
+        assertEquals(3,res.getIndiceMenor());
+        assertEquals(99,res.getMaior());
+        assertEquals(1,res.getIndiceMaior());
+    }
+    public void casoDeTest03() throws Exception
+    {
+        int v[]= {};
+        Utilitario a = new Utilitario();
+        Extremos res;
+       
+        res = a.acharExtremos(v);
+        assertNotNull("objeto nulo", res);
+    }
+    
 }
