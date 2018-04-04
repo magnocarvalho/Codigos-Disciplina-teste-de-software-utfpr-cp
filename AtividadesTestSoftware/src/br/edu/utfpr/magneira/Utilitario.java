@@ -17,7 +17,7 @@ public class Utilitario {
      * o maior nnumero no vetor e seus indices 
      */
     
-    public Extremos scharExtremos(int v[]) throws Exception
+    public Extremos acharExtremos(int v[]) throws Exception
     {
         if(v == null)
         {
@@ -38,7 +38,7 @@ public class Utilitario {
             if(v[i] > maior)
             {
                 maior = v[i];
-                indiceMaior = v[i];
+                indiceMaior = i;
             }
         }
         return new Extremos(menor, indiceMenor, maior, indiceMaior);
