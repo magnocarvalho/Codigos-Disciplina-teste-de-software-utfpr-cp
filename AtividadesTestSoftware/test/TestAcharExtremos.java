@@ -67,14 +67,20 @@ public class TestAcharExtremos {
         assertEquals(99,res.getMaior());
         assertEquals(1,res.getIndiceMaior());
     }
+    @Test
     public void casoDeTest03() throws Exception
     {
         int v[]= {};
         Utilitario a = new Utilitario();
         Extremos res;
-       
-        res = a.acharExtremos(v);
-        assertNotNull("objeto nulo", res);
+        try {
+            res = a.acharExtremos(v);
+            fail();
+        } 
+        catch (Exception e) 
+        {
+            assertEquals("vetor nao pode ser com zero elementos", e.getMessage());
+        }   
     }
     
 }
