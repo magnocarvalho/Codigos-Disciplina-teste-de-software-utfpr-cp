@@ -9,7 +9,7 @@ package br.edu.utfpr.magneira;
  *
  * @author Aluno
  */
-class Extremos {
+public class Extremos {
 
     int menor, maior, indiceMaior, indiceMenor;
 
