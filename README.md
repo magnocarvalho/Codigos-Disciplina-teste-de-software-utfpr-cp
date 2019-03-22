@@ -1,3 +1,3 @@
 # teste-de-software-utfpr-cp
 
-atividades e provas realizadas na materia de Test de software - UTFPR - CP - professor André Takeshi endo 
+atividades e provas realizadas na materia de Test de software - UTFPR - CP 
